@@ -79,7 +79,7 @@ h6,
   font-family: 'Lora', serif;
 }
 .bg-primary {
-  background-color: #c0a375 !important;
+  background-color: #3d8eb9 !important;
 }
 .bg-success {
   background-color: #90a878 !important;
@@ -94,8 +94,8 @@ h6,
   background-color: #f28281 !important;
 }
 .btn-primary {
-  background-color: #c0a375;
-  border-color: #c0a375;
+  background-color: #3d8eb9;
+  border-color: #3d8eb9;
   color: #ffffff;
 }
 .btn-primary:hover,
@@ -104,8 +104,8 @@ h6,
 .btn-primary:active,
 .btn-primary.active {
   color: #ffffff;
-  background-color: #a07e49;
-  border-color: #a07e49;
+  background-color: rgba(61, 142, 185, 0);
+  border-color: #688fca;
 }
 .btn-primary.disabled,
 .btn-primary:disabled {
@@ -224,14 +224,14 @@ h6,
 .btn-primary-outline:active,
 .btn-primary-outline.active {
   color: #ffffff;
-  background-color: #c0a375;
-  border-color: #c0a375;
+  background-color: #3d8eb9;
+  border-color: #3d8eb9;
 }
 .btn-primary-outline.disabled,
 .btn-primary-outline:disabled {
   color: #ffffff !important;
-  background-color: #c0a375 !important;
-  border-color: #c0a375 !important;
+  background-color: #3d8eb9 !important;
+  border-color: #3d8eb9 !important;
 }
 .btn-secondary-outline {
   background: none;
@@ -334,7 +334,7 @@ h6,
   border-color: #f28281 !important;
 }
 .text-primary {
-  color: #c0a375 !important;
+  color: #3d8eb9 !important;
 }
 .text-success {
   color: #90a878 !important;
@@ -361,32 +361,32 @@ h6,
   background-color: #f28281;
 }
 .btn-social {
-  border-color: #c0a375;
+  border-color: #3d8eb9;
 }
 .btn-social:hover {
-  background: #c0a375;
+  background: #3d8eb9;
 }
 .mbr-company .list-group-item.active .list-group-text {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 .mbr-footer p a,
 .mbr-footer ul a {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 .mbr-footer-content li::before,
 .mbr-footer .mbr-contacts li::before {
-  background: #c0a375;
+  background: #3d8eb9;
 }
 .mbr-footer-content li a:hover,
 .mbr-footer .mbr-contacts li a:hover {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 .lead a,
 .lead a:hover {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 .lead blockquote {
-  border-color: #c0a375;
+  border-color: #3d8eb9;
 }
 .mbr-plan-header.bg-primary .mbr-plan-subtitle,
 .mbr-plan-header.bg-primary .mbr-plan-price-desc {
@@ -410,7 +410,7 @@ h6,
 }
 .mbr-small-footer a,
 .mbr-gallery-filter li:hover {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 .scrollToTop_wraper {
   opacity: 0 !important;
@@ -443,7 +443,7 @@ h6,
 #menu-b .dropdown-item:hover,
 #menu-b .link:focus,
 #menu-b .dropdown-item:focus {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 #menu-b .link[aria-expanded="true"],
 #menu-b .dropdown-menu {
@@ -470,11 +470,11 @@ h6,
 }
 #menu-b .bg-color.transparent.opened .link:hover,
 #menu-b .bg-color.transparent.opened .link:focus {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 #menu-b .link[aria-expanded="true"],
 #menu-b .dropdown-item[aria-expanded="true"] {
-  color: #c0a375!important;
+  color: #3d8eb9!important;
 }
 #slider-a H2 {
   text-align: center;
@@ -601,7 +601,7 @@ h6,
 #ext_menu-1x .dropdown-item:hover,
 #ext_menu-1x .link:focus,
 #ext_menu-1x .dropdown-item:focus {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 #ext_menu-1x .link[aria-expanded="true"],
 #ext_menu-1x .dropdown-menu {
@@ -628,11 +628,11 @@ h6,
 }
 #ext_menu-1x .bg-color.transparent.opened .link:hover,
 #ext_menu-1x .bg-color.transparent.opened .link:focus {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 #ext_menu-1x .link[aria-expanded="true"],
 #ext_menu-1x .dropdown-item[aria-expanded="true"] {
-  color: #c0a375!important;
+  color: #3d8eb9!important;
 }
 #slider3-1j H2 {
   color: #ffffff;
@@ -731,7 +731,7 @@ h6,
 #menu-2n .dropdown-item:hover,
 #menu-2n .link:focus,
 #menu-2n .dropdown-item:focus {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 #menu-2n .link[aria-expanded="true"],
 #menu-2n .dropdown-menu {
@@ -758,11 +758,11 @@ h6,
 }
 #menu-2n .bg-color.transparent.opened .link:hover,
 #menu-2n .bg-color.transparent.opened .link:focus {
-  color: #c0a375;
+  color: #3d8eb9;
 }
 #menu-2n .link[aria-expanded="true"],
 #menu-2n .dropdown-item[aria-expanded="true"] {
-  color: #c0a375!important;
+  color: #3d8eb9!important;
 }
 #header1-2x .mbr-section-title {
   font-size: 84px;
