@@ -506,7 +506,7 @@
 
 
 function validarForm() {
-    $(".notificaciones").html("<img src='assets/images/loading.gif' style='max-height: 45px;margin-left: 45%;'>");
+    $(".notificaciones").html("<img src='assets/images/loading.gif' style='max-height: 30px;margin-left: 45%;'>");
     $(".notificaciones").show("fast");
     var mail = $("#mail").val();
     var tel = $("#phone").val();
