@@ -2169,3 +2169,10 @@ html.is-builder .article .lead:not([data-app-remove-it]) + div .btn {
 	top: 0;
 	left: -2400px;
 }
+.notificaciones{
+    display: none;
+    /*float: right;*/
+}
+.notificaciones img{
+        margin-right: 100px;
+}
