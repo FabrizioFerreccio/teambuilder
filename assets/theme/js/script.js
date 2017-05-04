@@ -1,3 +1,5 @@
+var total = 5000;
+
 (function ($) {
 
     $.extend($.easing, {
@@ -554,5 +556,108 @@ function validarForm() {
         },
         dataType: "json"
     });
-}
-;
+};
+
+$('.listaServicios li input, .listaAdicionales li input').on('click', function(){
+    $(".respuestaCheckbox").hide("fast");
+    var id = ($(this).attr('id'));
+    
+    if(id === 'liEstandar'){
+        if($(this).is(":checked"))
+        {
+            total += 5000;
+        }
+        else
+        {
+             total -= 5000;
+        }
+    }
+    if(id === 'liGestor'){
+        if($(this).is(":checked"))
+        {
+            total += 8000;
+            $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
+            $(".respuestaCheckbox").show("fast");
+            $(".listaAdicionales li input").attr("disabled", true);
+        }
+        else
+        {
+             total -= 8000;
+             $(".listaAdicionales li input").attr("disabled", false);
+        }
+    }
+    if(id === 'liEcommerce'){
+        if($(this).is(":checked"))
+        {
+            total += 10000;
+        }
+        else
+        {
+             total -= 10000;
+        }
+    }
+    if(id === 'liDiseño'){
+        if($(this).is(":checked"))
+        {
+            total += 4000;
+        }
+        else
+        {
+             total -= 4000;
+        }
+    }
+    if(id === 'liForm'){
+        if(!$("#liGestor").is(":checked"))
+        {
+            if($(this).is(":checked"))
+            {
+                total += 500;
+            }
+            else
+            {
+                 total -= 500;
+            }
+        }    
+    }
+    if(id === 'liSlider'){
+        if(!$("#liGestor").is(":checked"))
+        {
+            if($(this).is(":checked"))
+            {
+                total += 1500;
+            }
+            else
+            {
+                 total -= 1500;
+            }
+        }    
+    }
+    if(id === 'liGaleria'){
+        if(!$("#liGestor").is(":checked"))
+        {
+            if($(this).is(":checked"))
+            {
+                total += 2000;
+            }
+            else
+            {
+                 total -= 2000;
+            }
+        }    
+    }
+    if(id === 'liNoticias'){
+        if(!$("#liGestor").is(":checked"))
+        {
+            if($(this).is(":checked"))
+            {
+                total += 2000;
+            }
+            else
+            {
+                 total -= 2000;
+            }
+        }    
+    }
+    
+    $("#total").html("Presupuesto: $" + total);
+});
