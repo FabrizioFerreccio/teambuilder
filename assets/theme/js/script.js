@@ -627,7 +627,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
         }
         else
         {
-             total -= 4000;
+             if(total) total -= 4000;
         }
     }
     if(id === 'liForm'){
@@ -639,7 +639,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 500;
+                 if(total) total -= 500;
             }
         }    
     }
@@ -652,7 +652,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 1500;
+                 if(total) total -= 1500;
             }
         }    
     }
@@ -665,7 +665,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 2000;
+                 if(total) total -= 2000;
             }
         }    
     }
@@ -678,7 +678,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 2000;
+                 if(total) total -= 2000;
             }
         }    
     }
