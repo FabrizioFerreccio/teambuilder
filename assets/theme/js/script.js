@@ -565,35 +565,59 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
     if(id === 'liEstandar'){
         if($(this).is(":checked"))
         {
-            total += 5000;
+            total = 5000;
+            $(".listaServicios li input").prop('checked', false);
+            $(this).prop('checked', true);
+            $(".listaAdicionales li input").prop('checked', false);
+            $(".listaAdicionales li input").attr("disabled", false);
+            
         }
         else
         {
-             total -= 5000;
+            total = 0;
+            $(".listaAdicionales li input").prop('checked', false);
+            $(".listaAdicionales li input").attr("disabled", false);
         }
     }
     if(id === 'liGestor'){
         if($(this).is(":checked"))
         {
-            total += 8000;
+            total = 8000;
+            $(".listaServicios li input").prop('checked', false);
+            
+            $(this).prop('checked', true);
+            
             $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
             $(".respuestaCheckbox").show("fast");
+            $(".listaAdicionales li input").prop('checked', true);
             $(".listaAdicionales li input").attr("disabled", true);
         }
         else
         {
-             total -= 8000;
-             $(".listaAdicionales li input").attr("disabled", false);
+            total = 0;
+             
+            $(".listaAdicionales li input").prop('checked', false);
+            $(".listaAdicionales li input").attr("disabled", false);
         }
     }
     if(id === 'liEcommerce'){
         if($(this).is(":checked"))
         {
-            total += 10000;
+            total = 10000;
+            $(".listaServicios li input").prop('checked', false);
+            
+            $(this).prop('checked', true);
+            
+            $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
+            $(".respuestaCheckbox").show("fast");
+            $(".listaAdicionales li input").prop('checked', true);
+            $(".listaAdicionales li input").attr("disabled", true);
         }
         else
         {
-             total -= 10000;
+            total = 0;
+            $(".listaAdicionales li input").prop('checked', false);
+            $(".listaAdicionales li input").attr("disabled", false);
         }
     }
     if(id === 'liDiseño'){
