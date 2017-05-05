@@ -395,19 +395,45 @@
                                     <label class="form-control-label" for="form1-20-message">Mensaje</label>
                                     <textarea class="form-control" id="message" rows="7" data-form-field="Message" name="form1-20-message"></textarea>
                                 </div>
+                                <div class="row" style="margin-bottom: 15px">
+                                    <div class="col-md-8"><h3>En que producto estás interezado?</h3></div>
+                                    <div class="col-md-4" style="text-align: right"><h3 id="total">Presupuesto: $5000</h3></div>
+                                </div>    
+                                <div class="row" style="margin-bottom: 15px">
+                                    <div class="col-md-6" style="margin-bottom: 10px">
+                                        <ul class="list-group listaServicios">
+                                            <li class="list-group-item"><input id="liEstandar" type="checkbox" checked>&nbsp; Sitio Estandar <div style="float:right">$5000</div></li>
+                                            <li class="list-group-item"><input id="liGestor" type="checkbox">&nbsp; Sitio Gestor <div style="float:right">$8000</div></li>
+                                            <li class="list-group-item"><input id="liEcommerce" type="checkbox">&nbsp; e-commerce (carrito de compras)<div style="float:right">$10000</div></li>
+                                            <li class="list-group-item"><input id="liDiseño" type="checkbox">&nbsp; Diseño Gráfico - Diseño de Marca<div style="float:right">$4000</div></li>
+                                            <li class="list-group-item"><input id="liStecnico" type="checkbox">&nbsp; Servicio Técnico <div style="float:right">a convenir</div></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-group listaAdicionales">
+                                            <li class="list-group-item"><input id="liForm" type="checkbox">&nbsp; Formulario de Contacto <div style="float:right">$500</div></li>
+                                            <li class="list-group-item"><input id="liSlider" type="checkbox">&nbsp; Slider de Cabecera (auto administrable)<div style="float:right">$1500</div></li>
+                                            <li class="list-group-item"><input id="liGaleria" type="checkbox">&nbsp; Galeria de Imagenes (auto administrable)<div style="float:right">$2000</div></li>
+                                            <li class="list-group-item"><input id="liNoticias" type="checkbox">&nbsp; Sector noticias (auto administrable)<div style="float:right">$2000</div></li>
+                                            <li class="list-group-item respuestaCheckbox" style="display:none"></li>
+                                        </ul>
+                                    </div>
+                                </div>    
 
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-2" style="margin-top: 20px;">
+                                        <button type="submit" class="btn btn-black">enviar</button>
+                                    </div>
+                                    <div class="col-md-10">
                                         <div class="row">
-                                            <div class="g-recaptcha col-md-6" data-sitekey="6Lc7fB4UAAAAAP7n7khC8GpG-xL6LnEzHtK5dW05" style="margin-bottom: 25px;"></div>
-                                            <div class="col-md-6">
-                                                <div class="alert notificaciones"></div>
+                                            <div class="row">
+                                                <div class="g-recaptcha col-md-6" data-sitekey="6Lc7fB4UAAAAAP7n7khC8GpG-xL6LnEzHtK5dW05" style="margin-bottom: 25px;"></div>
+                                                <div class="col-md-6">
+                                                    <div class="alert notificaciones"></div>
+                                                </div>
                                             </div>
                                         </div>    
-                                    </div> 
-                                    <div class="col-md-4" style="margin-top: 20px;">
-                                        <button type="submit" class="btn btn-black">enviar</button>
-                                    </div>    
+                                    </div>
                                 </div>
                             </form>
                         </div>
