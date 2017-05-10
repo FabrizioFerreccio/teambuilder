@@ -1,4 +1,4 @@
-var total = 5000;
+var total = 4000;
 
 (function ($) {
 
@@ -565,7 +565,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
     if(id === 'liEstandar'){
         if($(this).is(":checked"))
         {
-            total = 5000;
+            total = 4000;
             $(".listaServicios li input").prop('checked', false);
             $(this).prop('checked', true);
             $(".listaAdicionales li input").prop('checked', false);
@@ -627,7 +627,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
         }
         else
         {
-             total -= 4000;
+             if(total) total -= 4000;
         }
     }
     if(id === 'liForm'){
@@ -639,7 +639,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 500;
+                 if(total) total -= 500;
             }
         }    
     }
@@ -652,7 +652,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 1500;
+                 if(total) total -= 1500;
             }
         }    
     }
@@ -665,7 +665,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 2000;
+                 if(total) total -= 2000;
             }
         }    
     }
@@ -678,10 +678,23 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
             }
             else
             {
-                 total -= 2000;
+                 if(total) total -= 2000;
             }
         }    
     }
     
     $("#total").html("Presupuesto: $" + total);
+});
+
+$(".comprar").click(function(){
+    
+    if($(this).attr("id") == 'ecommerce'){
+        $('#liEcommerce').click();
+    }
+    if($(this).attr("gestor") == 'ecommerce'){
+        $('#liGestor').click();
+    }
+    $('html,body').animate( { scrollTop:$("#form1-20").offset().top + 35 } , 400);
+    
+    
 });

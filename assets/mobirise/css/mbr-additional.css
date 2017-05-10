@@ -509,8 +509,8 @@ h6,
   color: #bcbcbc;
 }
 #features7-2s .iconbox {
-  background-color: #2969b0;
-  border-color: #2969b0;
+  background-color: #fff;
+  border-color: #fff;
 }
 #msg-box5-14 I {
   font-size: 60px;
@@ -542,14 +542,14 @@ h6,
 }
 #msg-box2-15 .mbr-section-title {
   color: #2969b0;
-  font-size: 60px;
+  font-size: 4vw;
 }
 #msg-box2-15 .mbr-section-subtitle {
   color: #a0a0a0;
 }
 #msg-box2-15 .mbr-section-title SPAN {
-  color: #000000;
-  font-size: 60px;
+  color: #fff;
+  font-size: 6vw;
 }
 #form1-20 .form-control-label {
   color: #000000;
