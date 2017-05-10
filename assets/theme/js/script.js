@@ -1,4 +1,4 @@
-var total = 5000;
+var total = 4000;
 
 (function ($) {
 
@@ -565,7 +565,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
     if(id === 'liEstandar'){
         if($(this).is(":checked"))
         {
-            total = 5000;
+            total = 4000;
             $(".listaServicios li input").prop('checked', false);
             $(this).prop('checked', true);
             $(".listaAdicionales li input").prop('checked', false);
@@ -684,4 +684,17 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
     }
     
     $("#total").html("Presupuesto: $" + total);
+});
+
+$(".comprar").click(function(){
+    
+    if($(this).attr("id") == 'ecommerce'){
+        $('#liEcommerce').click();
+    }
+    if($(this).attr("gestor") == 'ecommerce'){
+        $('#liGestor').click();
+    }
+    $('html,body').animate( { scrollTop:$("#form1-20").offset().top + 35 } , 400);
+    
+    
 });
