@@ -559,128 +559,67 @@ function validarForm() {
 };
 
 $('.listaServicios li input, .listaAdicionales li input').on('click', function(){
-    $(".respuestaCheckbox").hide("fast");
     var id = ($(this).attr('id'));
+    $(".respuestaCheckbox").hide("fast");
+    total = 0;
     
     if(id === 'liEstandar'){
-        if($(this).is(":checked"))
-        {
-            total = 4000;
-            $(".listaServicios li input").prop('checked', false);
-            $(this).prop('checked', true);
-            $(".listaAdicionales li input").prop('checked', false);
-            $(".listaAdicionales li input").attr("disabled", false);
-            
-        }
-        else
-        {
-            total = 0;
-            $(".listaAdicionales li input").prop('checked', false);
-            $(".listaAdicionales li input").attr("disabled", false);
-        }
-    }
-    if(id === 'liGestor'){
-        if($(this).is(":checked"))
-        {
-            total = 8000;
-            $(".listaServicios li input").prop('checked', false);
-            
-            $(this).prop('checked', true);
-            
-            $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
-            $(".respuestaCheckbox").show("fast");
-            $(".listaAdicionales li input").prop('checked', true);
-            $(".listaAdicionales li input").attr("disabled", true);
-        }
-        else
-        {
-            total = 0;
-             
-            $(".listaAdicionales li input").prop('checked', false);
-            $(".listaAdicionales li input").attr("disabled", false);
-        }
-    }
-    if(id === 'liEcommerce'){
-        if($(this).is(":checked"))
-        {
-            total = 10000;
-            $(".listaServicios li input").prop('checked', false);
-            
-            $(this).prop('checked', true);
-            
-            $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
-            $(".respuestaCheckbox").show("fast");
-            $(".listaAdicionales li input").prop('checked', true);
-            $(".listaAdicionales li input").attr("disabled", true);
-        }
-        else
-        {
-            total = 0;
-            $(".listaAdicionales li input").prop('checked', false);
-            $(".listaAdicionales li input").attr("disabled", false);
-        }
-    }
-    if(id === 'liDiseño'){
-        if($(this).is(":checked"))
-        {
-            total += 4000;
-        }
-        else
-        {
-             if(total) total -= 4000;
-        }
-    }
-    if(id === 'liForm'){
-        if(!$("#liGestor").is(":checked"))
-        {
+        $(".listaAdicionales li input").prop('checked', false);
             if($(this).is(":checked"))
             {
-                total += 500;
+                $(".listaServicios li input").prop('checked', false);
+                $(this).prop('checked', true);
+                $(".listaAdicionales li input").attr("disabled", false);
             }
             else
             {
-                 if(total) total -= 500;
+                $(".listaAdicionales li input").attr("disabled", false);
             }
-        }    
-    }
-    if(id === 'liSlider'){
-        if(!$("#liGestor").is(":checked"))
-        {
+        }
+        if(id === 'liGestor'){
+            $(".listaAdicionales li input").prop('checked', false);
             if($(this).is(":checked"))
             {
-                total += 1500;
+                $(".listaServicios li input").prop('checked', false);
+                $(this).prop('checked', true);
+                $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
+                $(".respuestaCheckbox").show("fast");
+                $(".listaAdicionales li input").attr("disabled", true);
             }
             else
             {
-                 if(total) total -= 1500;
+                $(".listaAdicionales li input").attr("disabled", false);
             }
-        }    
-    }
-    if(id === 'liGaleria'){
-        if(!$("#liGestor").is(":checked"))
-        {
+        }
+        if(id === 'liEcommerce'){
+            $(".listaAdicionales li input").prop('checked', false);
             if($(this).is(":checked"))
             {
-                total += 2000;
+                $(".listaServicios li input").prop('checked', false);
+
+                $(this).prop('checked', true);
+
+                $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
+                $(".respuestaCheckbox").show("fast");
             }
             else
             {
-                 if(total) total -= 2000;
+                $(".listaAdicionales li input").prop('checked', false);
             }
-        }    
-    }
-    if(id === 'liNoticias'){
-        if(!$("#liGestor").is(":checked"))
+        }
+    
+    $('.listaServicios li input, .listaAdicionales li input').each(function(){
+        
+        var price = ($(this).data('price'));
+
+        if($(this).is(":checked"))
         {
-            if($(this).is(":checked"))
-            {
-                total += 2000;
-            }
-            else
-            {
-                 if(total) total -= 2000;
-            }
-        }    
+            total += price;
+        }
+    });
+    
+    if(!$("#liEcommerce").is(":checked") && !$("#liGestor").is(":checked") && !$("#liEstandar").is(":checked")){
+        $(".listaAdicionales li input").attr("disabled", false);
     }
     
     $("#total").html("Presupuesto: $" + total);
