@@ -601,6 +601,7 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
 
                 $(".respuestaCheckbox").html("el sitio con gestor incluye todos los adicionales");
                 $(".respuestaCheckbox").show("fast");
+                $(".listaAdicionales li input").attr("disabled", true);
             }
             else
             {
@@ -626,14 +627,28 @@ $('.listaServicios li input, .listaAdicionales li input').on('click', function()
 });
 
 $(".comprar").click(function(){
+
+    if(window.location.href.includes("e-comerce.html")){
+        window.location.href = "index.html#form1-20?from=ecommerce";
+    }
     
     if($(this).attr("id") == 'ecommerce'){
-        $('#liEcommerce').click();
+        
     }
     if($(this).attr("gestor") == 'ecommerce'){
         $('#liGestor').click();
     }
-    $('html,body').animate( { scrollTop:$("#form1-20").offset().top + 35 } , 400);
     
+    else{
+        $('html,body').animate( { scrollTop:$("#form1-20").offset().top + 35 } , 400);
+    }
+});
+
+$(document).ready(function () {
+    
+    if(window.location.href.includes("from=ecommerce")){
+        $('#liEcommerce').click();
+        $('html,body').animate( { scrollTop:$("#form1-20").offset().top + 35 } , 400);
+    }
     
 });
